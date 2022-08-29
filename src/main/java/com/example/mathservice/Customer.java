@@ -44,14 +44,20 @@ public class Customer {
         this("", null, "female", 0);
     }
 
-    public Customer(String ID, String n, boolean s, int a){
+    public Customer(String ID, String n, String s, int a){
         this.ID = ID;
         this.name = n;
-        if(this.sex == "Male" || this.sex == "male"){
-            return true;
-        } else if (this.sex == "Male" || this.sex == "male") {
-            return false;
+        if(s.equals("Male") || s.equals("male")){
+            this.sex = true;
         }
-
+        else{
+            this.sex = false;
+        }
+        if(age < 0) {
+            this.age = 0;
+        }
+        else{
+            this.age = a;
+        }
     }
 }
