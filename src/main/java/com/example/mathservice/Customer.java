@@ -53,7 +53,7 @@ public class Customer {
         else{
             this.sex = false;
         }
-        if(age < 0) {
+        if(a < 0) {
             this.age = 0;
         }
         else{
